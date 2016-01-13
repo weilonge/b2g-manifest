@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+
+  <include name="base.xml"/>
+
+  <default revision="refs/tags/android-4.0.1_r1.1"
+           remote="aosp"
+           sync-j="8" />
+
+  <!-- B2G specific things. -->
+  <project path="build" name="platform_build" remote="b2g" revision="master">
+    <copyfile src="core/root.mk" dest="Makefile" />
+  </project>
+  <project path="dalvik" name="fake-dalvik" remote="b2g" revision="master" />
+  <project path="rilproxy" name="rilproxy" remote="b2g" revision="master" />
+  <project path="librecovery" name="librecovery" remote="b2g" revision="master" />
+  <project path="external/apitrace" name="apitrace" remote="apitrace" revision="refs/tags/6.1" />
+
+  <!-- Stock Android things (more or less) -->
+  <project path="abi/cpp" name="platform/abi/cpp" />
+  <project path="bionic" name="platform_bionic"
+           remote="b2g" revision="bcm2835-4.0.1_r1.1" />
+  <project path="bootable/recovery" name="platform/bootable/recovery" />
+  <project path="device/common" name="device/common" />
+  <project path="external/apriori" name="platform_external_apriori" remote="b2g" revision="master" />
+  <!-- TODO: can we drop bluetooth -->
+  <project path="external/bluetooth/bluez" name="platform/external/bluetooth/bluez" />
+  <project path="external/bluetooth/glib" name="platform/external/bluetooth/glib" />
+  <project path="external/bluetooth/hcidump" name="platform/external/bluetooth/hcidump" />
+  <project path="external/bsdiff" name="platform/external/bsdiff" />
+  <project path="external/bzip2" name="platform/external/bzip2" />
+  <project path="external/dbus" name="platform/external/dbus" />
+  <project path="external/dhcpcd" name="platform/external/dhcpcd" />
+  <project path="external/dnsmasq" name="platform/external/dnsmasq" />
+  <project path="external/elfcopy" name="platform_external_elfcopy" remote="b2g" revision="master" />
+  <project path="external/elfutils" name="platform_external_elfutils" remote="b2g" revision="master" />
+  <project path="external/e2fsprogs" name="platform/external/e2fsprogs" />
+  <project path="external/expat" name="platform/external/expat" />
+  <project path="external/fdlibm" name="platform/external/fdlibm" />
+  <project path="external/flac" name="platform/external/flac" />
+  <project path="external/freetype" name="platform/external/freetype" />
+  <project path="external/giflib" name="platform/external/giflib" />
+  <project path="external/gtest" name="platform/external/gtest" revision="8c212ebe53bb2baab3575f03069016f1fb11e449" />
+  <project path="external/harfbuzz" name="platform/external/harfbuzz" />
+  <project path="external/icu4c" name="platform/external/icu4c" />
+  <project path="external/iproute2" name="platform/external/iproute2" />
+  <project path="external/iptables" name="platform/external/iptables" />
+  <project path="external/jpeg" name="platform/external/jpeg" />
+  <project path="external/libgsm" name="platform/external/libgsm" />
+  <project path="external/liblzf" name="platform/external/liblzf" />
+  <project path="external/libnfc-nxp" name="platform/external/libnfc-nxp" />
+  <project path="external/libnl-headers" name="platform/external/libnl-headers" />
+  <project path="external/libpng" name="platform/external/libpng" />
+  <project path="external/libvpx" name="platform/external/libvpx" />
+  <project path="external/mksh" name="platform/external/mksh" />
+  <project path="external/opensans" name="platform_external_opensans" remote="b2g" revision="master" />
+  <project path="external/openssl" name="platform/external/openssl" />
+  <project path="external/protobuf" name="platform/external/protobuf" />
+  <project path="external/safe-iop" name="platform/external/safe-iop" />
+  <project path="external/screencap-gonk" name="screencap-gonk" remote="b2g" revision="master" />
+  <project path="external/skia" name="platform/external/skia" />
+  <project path="external/sonivox" name="platform/external/sonivox" />
+  <project path="external/speex" name="platform/external/speex" />
+  <project path="external/sqlite" name="platform/external/sqlite" />
+  <project path="external/stlport" name="platform/external/stlport" />
+  <project path="external/strace" name="platform/external/strace" />
+  <project path="external/tagsoup" name="platform/external/tagsoup" />
+  <project path="external/tinyalsa" name="platform/external/tinyalsa" />
+  <project path="external/tremolo" name="platform/external/tremolo" />
+  <project path="external/webp" name="platform/external/webp" />
+  <project path="external/webrtc" name="platform_external_webrtc"
+           remote="b2g" revision="bcm2835-4.0.1_r1.1" />
+  <project path="external/wpa_supplicant" name="platform/external/wpa_supplicant" />
+  <project path="external/wpa_supplicant_8" name="platform/external/wpa_supplicant_8" />
+  <project path="external/yaffs2" name="platform/external/yaffs2" />
+  <project path="external/zlib" name="platform/external/zlib" />
+  <project path="frameworks/base" name="platform_frameworks_base"
+           remote="b2g" revision="bcm2835-4.0.1_r1.1"/>
+  <project path="frameworks/opt/emoji" name="platform/frameworks/opt/emoji" />
+  <project path="frameworks/support" name="platform/frameworks/support" />
+  <project path="hardware/broadcom/wlan" name="platform/hardware/broadcom/wlan" />
+  <project path="hardware/libhardware" name="platform_hardware_libhardware"
+           remote="b2g" revision="bcm2835-4.0.1_r1.1" />
+  <project path="hardware/libhardware_legacy" name="platform_hardware_libhardware_legacy"
+           remote="b2g" revision="bcm2835-4.0.1_r1.1" />
+  <project path="hardware/ril" name="platform/hardware/ril" />
+  <project path="libcore" name="platform/libcore" />
+  <project path="ndk" name="platform/ndk" />
+  <project path="prebuilt" name="platform/prebuilt" />
+  <project path="prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.8" name="platform/prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.8" revision="master" />
+  <!-- TODO: can we drop this? -->
+  <project path="system/bluetooth" name="platform/system/bluetooth" />
+  <project path="system/core" name="platform_system_core"
+           remote="b2g" revision="bcm2835-4.0.1_r1.1" />
+  <project path="system/extras" name="platform/system/extras" />
+  <project path="system/media" name="platform/system/media" />
+  <project path="system/netd" name="platform_system_netd"
+           remote="b2g" revision="bcm2835-4.0.1_r1.1" />
+  <project path="system/vold" name="platform/system/vold" />
+
+  <!-- RPi things -->
+<!--
+  <project path="device/rpi/rpi" name="device-rpi" remote="b2g" revision="master" />
+  <project path="brcm_usrlib/dag" name="brcm_usrlib_dag"
+           remote="b2g" revision="bcm2835-4.0.1_r1.1" />
+  <project path="hardware/realtek" name="platform_hardware_realtek"
+           remote="b2g" revision="master" />
+-->
+  <!-- TODO: kernel? -->
+
+
+  <remote name="fdo" fetch="http://anongit.freedesktop.org/git" />
+  <project path="external/drm" name="mesa/drm" revision="e2acca4e40c87b00af75a5ffedafc26a099b657c" remote="fdo"/>
+
+  <remote name="github" fetch="http://github.com"/>
+  <project path="external/libpciaccess" name="android-ia/external_libpciaccess" revision="master" remote="github"/>
+
+  <project path="kernel/hardware/arm/gpu" name="codewalkerster/android_hardware_arm_gpu" revision="s805_4.4.2_master" remote="github"/>
+  <project path="kernel/hardware/wifi/realtek/drivers/8192cu" name="codewalkerster/android_hardware_wifi_realtek_drivers_8192cu" revision="3ef3ea2da3d8cecd67734ea520c770f1c32e38a9" remote="github"/>
+  <project path="kernel/hardware/wifi/realtek/drivers/8192du" name="codewalkerster/android_hardware_wifi_realtek_drivers_8192du" revision="s805_4.4.2_master" remote="github"/>
+  <project path="hardware/amlogic/mali" name="codewalkerster/android_hardware_amlogic_mali" revision="s805_4.4.2_master" remote="github"/>
+  <project path="external/remoteconf" name="codewalkerster/android_external_remoteconf" revision="s805_4.4.2_master" remote="github"/>
+
+  <remote name="peyo" fetch="http://github.com/peyo-hd"/>
+  <remove-project name="platform/external/tinyalsa" />
+  <project path="external/tinyalsa" name="external_tinyalsa" revision="nbox" remote="peyo" />
+
+  <remove-project name="platform/external/mesa3d"/>
+  <project path="external/mesa3d" name="external_mesa3d" revision="ibox" remote="peyo"/>
+  <project path="hardware/drm_gralloc" name="hardware_drm_gralloc" revision="master" remote="peyo"/>
+  <project path="hardware/drm_hwcomposer" name="hardware_drm_hwcomposer" revision="master" remote="peyo"/>
+
+  <project path="kernel/common" name="kernel_common" revision="android-3.18-ibox" remote="peyo"/>
+  <project path="device/x86/ibox" name="device_x86_ibox" revision="master" remote="peyo"/>
+
+  <project path="kernel/rpi" name="kernel_rpi" revision="rpi2" remote="peyo"/>
+  <project path="device/brcm/rpi2" name="device_brcm_rpi2" revision="lollipop" remote="peyo"/>
+
+  <project path="kernel/odrc" name="kernel_odrc" revision="lollipop" remote="peyo"/>
+  <project path="hardware/amlogic" name="hardware_amlogic" revision="master" remote="peyo"/>
+  <project path="hardware/amlogic/gralloc" name="hardware_amlogic_gralloc" revision="master" remote="peyo"/>
+  <project path="hardware/amlogic/hwcomposer" name="hardware_amlogic_hwcomposer" revision="master" remote="peyo"/>
+  <project path="hardware/amlogic/audio" name="hardware_amlogic_audio" revision="master" remote="peyo"/>
+  <project path="hardware/amlogic/libstagefrighthw" name="hardware_amlogic_libstagefrighthw" revision="lollipop" remote="peyo"/>
+  <project path="hardware/amlogic/wifi" name="hardware_amlogic_wifi" revision="master" remote="peyo"/>
+  <project path="device/aml/odrc" name="device_aml_odrc" revision="lollipop" remote="peyo"/>
+
+  <remove-project name="device/asus/flo-kernel" />
+  <remove-project name="device/asus/fugu-kernel" />
+  <remove-project name="device/lge/hammerhead-kernel" />
+  <remove-project name="device/lge/mako-kernel" />
+  <remove-project name="device/moto/shamu-kernel" />
+  <remove-project name="device/htc/flounder-kernel" />
+</manifest>
