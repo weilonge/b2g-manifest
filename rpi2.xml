@@ -125,7 +125,9 @@
   <remove-project name="platform/external/tinyalsa" />
   <project path="external/tinyalsa" name="external_tinyalsa" revision="nbox" remote="peyo" />
 
+<!--
   <remove-project name="platform/external/mesa3d"/>
+-->
   <project path="external/mesa3d" name="external_mesa3d" revision="ibox" remote="peyo"/>
   <project path="hardware/drm_gralloc" name="hardware_drm_gralloc" revision="master" remote="peyo"/>
   <project path="hardware/drm_hwcomposer" name="hardware_drm_hwcomposer" revision="master" remote="peyo"/>
@@ -145,10 +147,12 @@
   <project path="hardware/amlogic/wifi" name="hardware_amlogic_wifi" revision="master" remote="peyo"/>
   <project path="device/aml/odrc" name="device_aml_odrc" revision="lollipop" remote="peyo"/>
 
+<!--
   <remove-project name="device/asus/flo-kernel" />
   <remove-project name="device/asus/fugu-kernel" />
   <remove-project name="device/lge/hammerhead-kernel" />
   <remove-project name="device/lge/mako-kernel" />
   <remove-project name="device/moto/shamu-kernel" />
   <remove-project name="device/htc/flounder-kernel" />
+-->
 </manifest>
